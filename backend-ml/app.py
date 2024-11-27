@@ -44,8 +44,6 @@ def predict():
         filepath = os.path.abspath(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         image_file.save(filepath)
 
-        print(f"File saved to: {filepath}")  # Debugging log
-
         # Read and preprocess the image
         image = cv2.imread(filepath)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
