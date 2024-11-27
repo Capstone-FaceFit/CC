@@ -11,7 +11,7 @@ app = Flask(__name__)
 # Configuration
 app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg'}
 app.config['UPLOAD_FOLDER'] = 'static/uploads/'
-app.config['MODEL_FILE'] = 'face_types_model.h5'
+app.config['MODEL_FILE'] = 'backend-ml/face_types_model.h5'
 
 # Load the trained model
 model = load_model(app.config['MODEL_FILE'])
