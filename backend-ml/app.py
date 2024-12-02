@@ -17,7 +17,7 @@ app.config['MODEL_FILE'] = 'backend-ml/face_shapes_model.h5'
 model = load_model(app.config['MODEL_FILE'])
 
 # Class names
-class_names = ['Heart', 'Oblong', 'Oval', 'Round', 'Square']
+class_names = ['Heart', 'Oval', 'Round', 'Square']
 
 # Ensure upload folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
