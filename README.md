@@ -29,6 +29,9 @@ The FaceFit application leverages machine learning and cloud computing to recomm
 ### **Backend-ML**  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white) ![OpenCV](https://img.shields.io/badge/OpenCV-5C3B6D?style=for-the-badge&logo=opencv&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)  
 
+### **Deployment**  
+![App Engine](https://img.shields.io/badge/App_Engine-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white) ![Cloud Run](https://img.shields.io/badge/Cloud_Run-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white) ![Pub/Sub](https://img.shields.io/badge/Pub/Sub-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white) ![Cloud Scheduler](https://img.shields.io/badge/Cloud_Scheduler-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)  
+
 ---
 
 ## **API Documentation**  
@@ -53,18 +56,13 @@ The FaceFit application leverages machine learning and cloud computing to recomm
 
 ---
 
-## **Deployment**  
+## **Deployment on Google Cloud Platform**
 
-### **Backend-API**  
-- **Platform**: Google Cloud Compute Engine.  
-- **Key Features**: Scalable API deployment with Docker and Load Balancing.  
-
-### **Backend-ML**  
-- **Platform**: Google Cloud AI Platform or Compute Engine.  
-- **Key Features**:  
-  - TensorFlow runtime for efficient inference.  
-  - Optimized image preprocessing with OpenCV.  
-  - Secure endpoint for prediction requests.  
+- **App Engine**: Used for deploying the backend services in a serverless environment, enabling automatic scaling.
+- **Cloud SQL**: Managed relational database service for storing user and product data.
+- **Cloud Run**: Deployment service for running containerized applications in a fully managed environment, ideal for the ML model API.
+- **Pub/Sub**: Provides real-time event-driven architecture for communication between services.
+- **Cloud Scheduler**: Schedules tasks like cleanup and model retraining for better automation.
 
 ---
 
