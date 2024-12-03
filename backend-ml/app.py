@@ -11,7 +11,7 @@ app = Flask(__name__)
 # Configuration
 app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg'}
 app.config['UPLOAD_FOLDER'] = 'static/uploads/'
-app.config['MODEL_FILE'] = 'backend-ml/face_shapes_model.h5'
+app.config['MODEL_FILE'] = 'face_shapes_model.h5'
 
 # Load the trained model
 model = load_model(app.config['MODEL_FILE'])
@@ -61,5 +61,14 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route("/health-check", methods=["GET"])
+def health_check():
+    """Endpoint to check if the service is running."""
+    try:
+        return jsonify({"status": "Service is running"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    port = int(os.environ.get("PORT", 8080))
+    app.run(debug=True, host="0.0.0.0", port=port)
