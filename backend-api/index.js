@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(authRoute);
 app.get('/', (req, res) => {
-    res.json({ message: 'Hello, World!' });
+    res.json({ message: 'Server is Running Yeay!' });
   });
 
 
