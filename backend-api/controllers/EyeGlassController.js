@@ -47,6 +47,30 @@ export const createProduct = async (req, res) => {
   }
 };
 
+export const createProductsBulk = async (req, res) => {
+  const products = req.body; // Assuming the array of product objects is in the request body
+
+  try {
+    // Use Prisma's transaction to create multiple products in bulk
+    const createdProducts = await prisma.eyeglasses.createMany({
+      data: products,
+      skipDuplicates: true, // Optional: skips inserting duplicates based on unique constraints
+    });
+
+    res.status(201).json({
+      msg: "Products successfully created.",
+      count: createdProducts.count, // Total products created
+    });
+  } catch (error) {
+    console.error("Error creating products in bulk:", error);
+    res.status(400).json({
+      msg: "An error occurred while creating products in bulk.",
+      error: error.message,
+    });
+  }
+};
+
+
 export const updateProduct = async (req, res) => {
   const {
     Link,
