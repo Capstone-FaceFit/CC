@@ -38,7 +38,7 @@ export const register = async (req, res) => {
         email,
         phoneNumber,
         password: hashedPassword,
-        profilePic: "",
+        profilePic: "https://storage.googleapis.com/facefit-storage/profile-image.JPG",
       },
     });
 
