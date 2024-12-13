@@ -51,7 +51,7 @@ The FaceFit application leverages machine learning and cloud computing to recomm
 - **Body:**  
   ```json
   {
-    "faceShape": "round"
+    "prediction": "Round"
   }
 
 **`GET /health-check`**: Provides a health check to ensure the backend ML service is running.
