@@ -42,11 +42,11 @@ The FaceFit application leverages machine learning and cloud computing to recomm
 
 ## **API Documentation**
 
-### **Backend API Endpoinst :**
+### **Backend API Endpoints:**
 
 Here's the link to API documentation for this backend API :
 
-[`https://documenter.getpostman.com/view/30790150/2sAYHxnPZh`](https://documenter.getpostman.com/view/30790150/2sAYHxnPZh)
+[https://documenter.getpostman.com/view/30790150/2sAYHxnPZh](https://documenter.getpostman.com/view/30790150/2sAYHxnPZh)
 
 ### **Backend-ML Endpoints**
 
