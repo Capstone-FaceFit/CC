@@ -37,8 +37,35 @@ The FaceFit application leverages machine learning and cloud computing to recomm
 ## **API Documentation**  
 
 ### **Backend-ML Endpoints**
-- **`POST /predict`**: Accepts an image file and returns the recommended eyeglass frames based on the face shape.
-- **`GET /health-check`**: Provides a health check to ensure the backend ML service is running.
+**`POST /predict`**: Accepts an image file and returns the recommended eyeglass frames based on the face shape.
+
+**Request:**  
+- **Method:** POST  
+- **Headers:**  
+  - `Content-Type: multipart/form-data`  
+- **Body:**  
+  - `file`: The image file to analyze (e.g., JPEG, PNG).
+
+**Response:**  
+- **Status Code:** 200 (Success)  
+- **Body:**  
+  ```json
+  {
+    "faceShape": "round"
+  }
+
+**`GET /health-check`**: Provides a health check to ensure the backend ML service is running.
+
+**Request:**  
+- **Method:** GET
+
+**Response:**  
+- **Status Code:** 200 (Success)  
+- **Body:**  
+  ```json
+  {
+    "status": "Service is running"
+  }
 
 ### **Backend-API Endpoints**
 #### **User Management**
